@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    button {
+      color:purple;
+    font-family: verdana;
+    border: 2px solid purple;
+           font-weight: bold;
+background-color: rgb(234, 238, 234);
+
+  }
+
+      #R{
+position: absolute;
+        top:100px;
+        animation:R 2s infinite;
+        animation-play-state: paused
+
+
+      }
+      #l{
+        position: absolute;
+                top:100px;
+                animation:l 2s infinite;
+                animation-play-state: paused
+
+      }
+      #s{
+        position: absolute;
+                top:100px;
+                left:200px;
+                color:red;
+                  border: 4px solid red;
+
+      }
+      #f{
+        position: absolute;
+                left:195px;
+                animation:f 2s infinite;
+                animation-play-state: paused
+
+      }
+      #b{
+position: absolute;
+top:200px;
+left: 195px;
+animation:b 2s infinite;
+animation-play-state: paused
+
+      }
+      #name{
+          position: absolute;
+        top:450px;
+        left:100px;
+        font-weight: bold;
+      }
+
+      @keyframes R{
+        from {left: 300px;}
+        to {left: 400px;}
+
+      }
+      @keyframes l{
+        from {left: 100px;}
+        to { left: 0px;}
+
+      }
+      @keyframes b{
+        from {top:150px; }
+        to {top: 250px;}
+
+      }
+      @keyframes f{
+        from {top:50px;}
+      to {top: 0px;}
+
+
+      }
+      body{
+
+       background-image: url("back.jpg");
+       background-repeat: no-repeat
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <button id="R" type="button" name="button" onclick="runR()">Right</button>
+
+            <button id="f" onclick="runf()">Forward</button>
+            <button id="b" onclick="runb()">Backward</button>
+            <button id="s" onclick="stop()">STOP</button>
+            <button id="l" onclick="runl()">Left</button>
+
+            <p id="name">Done by: Maram Al-Sofiani</p>
+<script>
+  function runR(){
+    document.getElementById("R").style.animationPlayState="running"
+  }
+  function runl(){
+    document.getElementById("l").style.animationPlayState="running"
+  }
+  function runb(){
+    document.getElementById("b").style.animationPlayState="running"
+  }
+  function runf(){
+    document.getElementById("f").style.animationPlayState="running"
+  }
+  function stop(){
+    document.getElementById("R").style.animationPlayState="paused";
+      document.getElementById("f").style.animationPlayState="paused";
+        document.getElementById("b").style.animationPlayState="paused";
+          document.getElementById("l").style.animationPlayState="paused"
+  }
+</script>
+  </body>
+</html>
